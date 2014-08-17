@@ -13,7 +13,7 @@
         </label>
         <label for="phone">
           <span>Telefone para contato</span>
-          <input type="tel" name="phone" id="phone" required="required" class="column-full" />
+          <input type="tel" name="phone" id="phone" required="required" class="column-full" maxlength="15" />
         </label>
         <label for="email">
           <span>Email</span>
@@ -27,9 +27,8 @@
           <span>Mensagem</span>
           <textarea name="message" id="message" required="required" cols="40" rows="6" class="column-full"></textarea>
         </label>
-        <label for="">
-          <input type="submit" name="send" value="Enviar" class="btn" />
-        </label>
+
+        <input type="submit" name="send" value="Enviar" class="btn" />
       </fieldset>
     </form>
   </article><!-- #content -->

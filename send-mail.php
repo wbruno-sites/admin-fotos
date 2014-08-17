@@ -2,7 +2,7 @@
 
 if( $_SERVER['REQUEST_METHOD']=='POST' ) {
   $to             = 'contato@studioag.arq.br'; //para quem vai o email
-  $to             = 'wbrunom@gmail.com'; //para quem vai o email
+  $to             = 'rocha_bruno@hotmail.com'; //para quem vai o email
   $subject        = 'Site - ' . $_POST['subject'];
 
   /* Mensagem */
@@ -13,7 +13,7 @@ if( $_SERVER['REQUEST_METHOD']=='POST' ) {
   '<img src="http://studioag.tempsite.ws/images/logo.png" alt="" />'.
   'Olá, <b>'.$_POST['name'].'</b><br><br>'.
   'Mandou a seguinte mensagem pela seção "Contato" do site: <br>'.
-  $_POST['message'].
+  nl2br($_POST['message']).
   '<br><br>E deixou o seguinte telefone para contato:<b>'.$_POST['phone'].'</b>'.
   '<br>e email:<b>'.$_POST['email'].'</b>';
 
