@@ -15,14 +15,11 @@ a:hover { text-decoration: underline; }
 p { margin-bottom: 25px; line-height: 1.4em; }
 
 
-.content { margin: 0 auto; position: relative; }
-.fleft { float: left; }
-.fright { float: right; }
-.clear { clear: both; }
+.content { position: relative; }
 
 .title { font-family: 'Open Sans Condensed', sans-serif; font-weight: bold; margin-bottom: 10px; }
 
-.hidden-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
+.hide-text { overflow: hidden; text-indent: 100%; white-space: nowrap; }
 .is-hidden { display: none; }
 
 /* styles */
@@ -31,24 +28,10 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 }
 .img-full { margin-bottom: 40px; display: block; }
 
-/* menu */
-#header {
-	padding-top: 15px;
-	margin-bottom: 20px;
+@media only screen and (max-width: 660px) {
+	.border-right { border-right: none; border-bottom:  1px solid #555; margin-bottom: 20px; }
+	.img-full { margin-bottom: 10px; }
 }
-#header-nav {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-.header-nav-item {
-	color: #343434;
-	text-transform: uppercase;
-	font-size: 16px;
-	margin-right: 40px;
-}
-.header-nav-item:last-child { margin-right: 0 }
-.header-nav-item.active { color: #6e6e6e; }
 
 /* content */
 #content {
@@ -56,19 +39,34 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 	min-height: 400px;
 	overflow: hidden;
 }
+@media only screen and (max-width: 960px) {
+  #content { padding-bottom: 20px; min-height: 100px; }
+}
 
 /* pinterest */
 .column-pinterest span[class$="_fancy"] { width: 100%; }
 .column-pinterest span[class$="_okay"] { width: 95% !important; }
 
+.social-midia {
+	width: 50px;
+}
+.social-midia-item {
+	background: url('../images/sprite-social-midia.png') no-repeat;
+	width: 20px; height: 20px;
+	margin-right: 10px;
+}
+.social-midia-item:last-child { margin-right: 0 }
+
+.social-midia-pinterest { background-position: left top; }
+.social-midia-facebook { background-position: right top; }
 
 /* footer */
 #footer {
 	text-align: center;
 	font-size: 16px;
+	padding-bottom: 30px;
 }
-.footer-title { text-transform: uppercase; }
-
+.footer-title { text-transform: uppercase; margin-bottom: 15px; }
 
 @media print {
 	.content { width: auto; }

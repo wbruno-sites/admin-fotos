@@ -1,0 +1,10 @@
+label { display: block; margin-bottom: 20px; }
+label span { display: block; text-transform: uppercase; }
+input, select, textarea { border: 1px solid #ccc; padding: 7px 7px; }
+input.column-full,
+textarea.column-full { width: 100%; }
+.btn {
+  background: #272727;
+  color: #fff;
+  padding: 10px 30px;
+}

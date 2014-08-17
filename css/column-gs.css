@@ -73,6 +73,7 @@
   .column-twelfth { width: 16.6667%; }
 }
 @media only screen and (max-width: 660px) {
+  .column-two-thirds,
   .column-third:nth-child(n) { clear: both; float: none; padding-left: 15px; padding-right: 15px; width: 100%; }
   .column-fifth { width: 50%; }
   .column-sixth { width: 33.3333%; }

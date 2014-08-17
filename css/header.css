@@ -1,0 +1,24 @@
+#header {
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+.header-inner { position: relative; }
+#header-nav {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+.header-nav-item {
+  color: #343434;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-right: 40px;
+}
+.header-nav-item:last-child { margin-right: 0 }
+.header-nav-item.active { color: #6e6e6e; }
+
+@media only screen and (max-width: 660px) {
+  #logo { float: none; display: block; margin: 0 auto 15px; }
+  #header-nav { position: static; width: 290px; margin: 0 auto; }
+  .header-nav-item { margin-right: 17px; }
+}

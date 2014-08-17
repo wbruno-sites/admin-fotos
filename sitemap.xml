@@ -7,9 +7,9 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-		<loc>http://URL_DO_SITE.com.br/</loc>
+		<loc>http://studioag.com.br/</loc>
 		<mobile:mobile/>
-		<lastmod>2010-01-02T20:10:01+00:00</lastmod>
+		<lastmod>2014-08-17T20:11:10+00:00</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>

@@ -1,0 +1,63 @@
+[Sun Aug 17 10:59:49 2014] [error] [client 201.1.49.13] File does not exist: /home/storage/4/b9/8b/studioag/public_html/favicon.ico, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:03:05 2014] [error] [client 201.1.49.13] File does not exist: /home/storage/4/b9/8b/studioag/public_html/favicon.ico
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'inc/init.inc.php' for inclusion (include_path='.:/usr/share/pear') in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 5
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: cannonical in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 12
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 15
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 21
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 24
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 26
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 27
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 28
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 33
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 51
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 52
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 53
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Fatal error:  Call to undefined function  body_class() in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 66
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] File does not exist: /home/storage/4/b9/8b/studioag/public_html/javascript/all.js, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'inc/init.inc.php' for inclusion (include_path='.:/usr/share/pear') in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 5, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: cannonical in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 12, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 15, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 21, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 24, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 26, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 27, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 28, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 33, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 51, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 52, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 53, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:06:50 2014] [error] [client 201.1.49.13] PHP Fatal error:  Call to undefined function  body_class() in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 66, referer: http://studioag.tempsite.ws/
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Warning:  include(inc/init.inc.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'inc/init.inc.php' for inclusion (include_path='.:/usr/share/pear') in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 1
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 5
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: cannonical in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 12
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 15
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 16
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 21
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 24
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 26
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: url in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 27
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 28
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: title in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 31
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: description in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 33
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 51
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 52
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Notice:  Undefined variable: domain in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 53
+[Sun Aug 17 11:07:21 2014] [error] [client 201.1.49.13] PHP Fatal error:  Call to undefined function  body_class() in /home/storage/4/b9/8b/studioag/public_html/header.tpl.html on line 66
