@@ -71,7 +71,7 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 
 /* project-item */
 .project-item { margin-bottom: 30px; height: 220px; overflow: hidden; }
-
+.blueprint-item { text-align: center; }
 
 
 @media print {
