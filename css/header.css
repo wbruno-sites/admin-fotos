@@ -1,6 +1,6 @@
 #header {
   padding-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .header-inner { position: relative; }
 #header-nav {
@@ -14,11 +14,15 @@
   font-size: 16px;
   margin-right: 40px;
 }
+.header-nav-item:hover { color: #FFCC66 }
 .header-nav-item:last-child { margin-right: 0 }
 .header-nav-item.active { color: #6e6e6e; }
 
 @media only screen and (max-width: 660px) {
-  #logo { float: none; display: block; margin: 0 auto 15px; }
+  #logo { float: none; display: block; margin: 0 auto 15px; width: 150px; }
   #header-nav { position: static; width: 290px; margin: 0 auto; }
   .header-nav-item { margin-right: 17px; }
+}
+@media only screen and (max-width: 480px) {
+  #logo { width: 130px; }
 }

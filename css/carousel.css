@@ -21,10 +21,9 @@
 }
 .pager-item {
   cursor: pointer;
-  background: #ddd;
-  width: 20px; height: 20px;
-  border-radius: 50%;
-  margin-right: 2px;
+  background: #333;
+  width: 10px; height: 5px;
+  margin-right: 3px;
 }
 .pager-item:hover,
 .pager-item.is-active { background: #eee; }
