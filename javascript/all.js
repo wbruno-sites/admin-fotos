@@ -6,8 +6,8 @@
 
 /* Máscaras ER */
 function mascara(o,f){
-  v_obj=o
-  v_fun=f
+  v_obj=o;
+  v_fun=f;
   setTimeout("execmascara()",1)
 }
 function execmascara(){
@@ -23,7 +23,9 @@ function id( el ){
   return document.getElementById( el );
 }
 window.onload = function(){
-  id('phone').addEventListener('keyup', function(){
-    mascara( this, mtel );
-  });
-}
+  if (id('phone')) {
+    id('phone').addEventListener('keyup', function(){
+      mascara( this, mtel );
+    });
+  }
+};

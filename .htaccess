@@ -5,6 +5,7 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.studioag\.arq\.br$
 RewriteRule (.*) http://studioag.arq.br/$1 [R=301,NC,L]
 
-RewriteRule ^([a-z]+)$ $1.html [NC,L]
+RewriteRule ^([a-z-]+)$ $1.html [NC,L]
+RewriteRule ^projeto\/([a-z-]+)$ view-projeto.html?project=$1 [NC,L]
 
 ErrorDocument 404 /404.html

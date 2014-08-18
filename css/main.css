@@ -16,6 +16,7 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 
 
 .content { position: relative; }
+.overflow { overflow: hidden; }
 
 .title { font-family: 'Open Sans Condensed', sans-serif; font-weight: bold; margin-bottom: 10px; }
 
@@ -67,6 +68,11 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 	padding-bottom: 30px;
 }
 .footer-title { text-transform: uppercase; margin-bottom: 15px; }
+
+/* project-item */
+.project-item { margin-bottom: 30px; height: 220px; overflow: hidden; }
+
+
 
 @media print {
 	.content { width: auto; }

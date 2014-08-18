@@ -1,0 +1,43 @@
+<?php include 'header.tpl.html'; ?>
+  <article id="content" class="content column-full cf">
+    <div id="adcast-wrap" class="content">
+      <div class="overflow">
+        <ul id="adcast">
+          <li class="adcast-item is-active"><img src="/images/projetos/casa-bunker/1.jpeg" alt="" /></li>
+          <li class="adcast-item"><img src="/images/projetos/casa-bunker/2.jpeg" alt="" /></li>
+          <li class="adcast-item"><img src="/images/projetos/casa-bunker/3.jpeg" alt="" /></li>
+          <li class="adcast-item"><img src="/images/projetos/casa-bunker/4.jpeg" alt="" /></li>
+          <li class="adcast-item"><img src="/images/projetos/casa-bunker/5.jpeg" alt="" /></li>
+        </ul><!-- #adacst -->
+        <div id="pager">
+          <span class="pager-item fleft is-active" data-adcast="0"></span>
+          <span class="pager-item fleft" data-adcast="1"></span>
+          <span class="pager-item fleft" data-adcast="2"></span>
+          <span class="pager-item fleft" data-adcast="3"></span>
+          <span class="pager-item fleft" data-adcast="4"></span>
+        </div><!-- #pager -->
+      </div><!-- .overflow -->
+    </div><!-- #adacst-wrap -->
+
+<script src="/javascript/slideshow.js"></script>
+<script>
+(function() {
+  "use strict";
+  /*global document:false */
+  var $ = function(selector) {
+      return document.querySelectorAll(selector);
+  },
+      $adcasts = $('.adcast-item'),
+      $pagers = $('.pager-item');
+
+  adcast.init({
+    adcasts: $adcasts,
+    pagers: $pagers,
+    pagersClick: true
+  });
+}());
+</script>
+
+    <?php var_dump( $_GET ); ?>
+  </article><!-- #content -->
+<?php include 'footer.tpl.html'; ?>
