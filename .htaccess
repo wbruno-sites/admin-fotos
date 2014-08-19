@@ -6,6 +6,8 @@ RewriteCond %{HTTP_HOST} ^www\.studioag\.arq\.br$
 RewriteRule (.*) http://studioag.arq.br/$1 [R=301,NC,L]
 
 #admin
+RewriteRule ^admin\/?$ /admin/index [NC,L]
+RewriteRule ^admin\/login\/??$ /admin/login.php [NC,L]
 RewriteRule ^admin\/([a-z-]+)\/?$ /admin/views/$1.php [NC,L]
 RewriteRule ^admin\/([a-z-]+)\/view\/?$ /admin/views/view-$1.php [NC,L]
 RewriteRule ^admin\/([a-z-]+)\/new\/?$ /admin/views/new-$1.php [NC,L]
