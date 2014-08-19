@@ -1,31 +1,64 @@
 <?php include 'header.tpl.html'; ?>
-  <article id="content" class="content column-full cf">
-    <h1 class="column-full">Casa Bunker | SP, Brasil | 2013</h1>
+<?php
+  $photo = new Photo();
 
+  $vo = new ProjectVO();
+  $model = new Project();
+  $controller = new ProjectController($vo, $model);
+  $controller->byId(getGet('id'));
+
+?>
+  <article id="content" class="content column-full cf">
+    <h1 class="column-full"><?php echo $vo->get_label(); ?><?php echo $vo->get_description() ? ' | '.$vo->get_description() : ''; ?></h1>
+
+<?php
+  $files = $photo->carousel(getGet('id'));
+  if( $files ) {
+?>
     <div id="adcast-wrap" class="content space-bottom">
       <div class="overflow">
-        <ul id="adcast">
-          <li class="adcast-item is-active"><img src="/images/projetos/casa-bunker/1.jpeg" alt="" /></li>
-          <li class="adcast-item"><img src="/images/projetos/casa-bunker/2.jpeg" alt="" /></li>
-          <li class="adcast-item"><img src="/images/projetos/casa-bunker/3.jpeg" alt="" /></li>
-          <li class="adcast-item"><img src="/images/projetos/casa-bunker/4.jpeg" alt="" /></li>
-          <li class="adcast-item"><img src="/images/projetos/casa-bunker/5.jpeg" alt="" /></li>
+        <ul id="adcast" style="width: <?php echo sizeof($files) * 638 ?>px">
+<?php
+  $i = 0;
+  $imgs = Array();
+  $pagers = Array();
+
+  foreach($files AS $file) {
+    $imgs[] = '<li class="adcast-item is-active"><img src="/' . $file . '" alt="" /></li>';
+    $pagers[] = '<span class="pager-item fleft is-active" data-adcast="' . $i . '"></span>';
+    $i++;
+  }
+  echo implode($imgs);
+?>
         </ul><!-- #adacst -->
         <div id="pager">
-          <span class="pager-item fleft is-active" data-adcast="0"></span>
-          <span class="pager-item fleft" data-adcast="1"></span>
-          <span class="pager-item fleft" data-adcast="2"></span>
-          <span class="pager-item fleft" data-adcast="3"></span>
-          <span class="pager-item fleft" data-adcast="4"></span>
+<?php
+    echo implode($pagers);
+?>
         </div><!-- #pager -->
       </div><!-- .overflow -->
     </div><!-- #adacst-wrap -->
+<?php }//if carousel ?>
 
+
+<?php
+  $files = $photo->blueprint(getGet('id'));
+  if( $files ) {
+?>
     <h2 class="column-full">Plantas/Desenhos</h2>
 
     <ul id="list-blueprints" class="column-two-thirds content overflow">
-      <li class="blueprint-item"><img src="/images/projetos/casa-bunker/0.png" alt=""></li>
-    </ul>
+<?php
+  $i = 0;
+  $blueprint = Array();
+  foreach($files AS $file) {
+    $blueprint[] = '<li class="blueprint-item"><img src="/' . $file . '" alt=""></li>';
+    $i++;
+  }
+  echo implode($blueprint);
+?>
+    </ul><!-- #list-blueprints -->
+<?php } ?>
 
 <script src="/javascript/slideshow.js"></script>
 <script>
@@ -46,6 +79,5 @@
 }());
 </script>
 
-    <?php var_dump( $_GET ); ?>
   </article><!-- #content -->
 <?php include 'footer.tpl.html'; ?>

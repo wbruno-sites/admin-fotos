@@ -10,9 +10,8 @@ class User extends AbstractModel
 
 	public function __construct()
 	{
-		$this->table = 'user';
 		$this->vo = new UserVO();
-    $this->dao = new DAO( $this->table );
+    $this->dao = new DAO( 'user' );
 		$this->db = Db::getInstance();
 	}
 

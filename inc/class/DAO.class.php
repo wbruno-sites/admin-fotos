@@ -23,14 +23,6 @@ class DAO
 		$this->statement = Array();
 	}
 
-	final public function save( ValueObject $vo )
-	{
-		$sql = $vo->get_id() != null ? $this->update( $vo ) : $this->insert( $vo );
-		$query = $this->query( $sql );
-
-		$vo->set_id( $this->lastInsert( $vo ) );
-		return $query;
-	}
 	final public function del( ValueObject $vo )
 	{
 		$sql = $this->delete( $vo );
@@ -183,7 +175,7 @@ class DAO
 		$this->execute();
 		return $this->sql;
 	}
-	final private function lastInsert( $vo )
+	public function lastInsert( $vo )
 	{
 		return $this->db->insert_id ? $this->db->insert_id : $vo->get_id();
 	}

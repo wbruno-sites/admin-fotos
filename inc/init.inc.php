@@ -14,8 +14,8 @@ set_include_path(implode(PATH_SEPARATOR, array(
 )));
 
 /**
- * Faz require do arquivo de configurações
- * edite ele para mudar conexão com o banco de dados
+ * Faz require do arquivo de configuraÃ§Ãµes
+ * edite ele para mudar conexÃ£o com o banco de dados
  */
 if( !file_exists(BASE_PATH.'config.inc.php') ){
         exit('Erro config.php nao encontrado');
@@ -33,7 +33,7 @@ function __autoload( $class ){
 		include $class.'.class.php';
 }
 /**
- * Verifica se foi enviada uma requisição POST ao servidor
+ * Verifica se foi enviada uma requisiÃ§Ã£o POST ao servidor
  */
 function isPost(){
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -56,7 +56,7 @@ function getPost( $campo ){
 }
 /**
  * Evita SQL Injection
- * @param $var var, variável a ser 'limpa'
+ * @param $var var, variÃ¡vel a ser 'limpa'
  * @return $str string
  */
 function filter( $var ){
@@ -69,18 +69,21 @@ function filter( $var ){
 	return $str;
 }
 /**
- * @param $string, valor que será limpo para URL
+ * @param $string, valor que serÃ¡ limpo para URL
  */
 function slug( $string ){
+
 	$string = trim($string);
 
-	$string = preg_replace("/[áàâãª]/i","a",$string);
-	$string = preg_replace("/[éèê]/i","e",$string);
-	$string = preg_replace("/[íìî]/i","i",$string);
-	$string = preg_replace("/[óòôõº]/i","o",$string);
-	$string = preg_replace("/[úù]/i","u",$string);
-	$string = preg_replace("/[ç]/i","c",$string);
+	$string = preg_replace("/[Ã¡Ã Ã¢Ã£Âª]/i","a",$string);
+	$string = preg_replace("/[Ã©Ã¨Ãª]/i","e",$string);
+	$string = preg_replace("/[Ã­Ã¬Ã®]/i","i",$string);
+	$string = preg_replace("/[Ã³Ã²Ã´ÃµÂº]/i","o",$string);
+	$string = preg_replace("/[ÃºÃ¹]/i","u",$string);
+	$string = preg_replace("/[Ã§]/i","c",$string);
 	$string = preg_replace("/[\/,()]/i","",$string);
+	$string = str_replace("|","",$string);
+	$string = str_replace("  "," ",$string);
 
 	$string = strtolower($string);
 

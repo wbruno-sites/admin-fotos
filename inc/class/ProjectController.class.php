@@ -1,10 +1,10 @@
 <?php
 /**
- * @class ProjectAction
+ * @class ProjectController
  * @author William Bruno
  * @date 27/08/2010
  */
-class ProjectAction extends AbstractAction
+class ProjectController extends AbstractController
 {
   public function set_post()
   {
@@ -16,6 +16,6 @@ class ProjectAction extends AbstractAction
   {
     $this->vo->set_id( $dados->id );
     $this->vo->set_name( $dados->label );
-    $this->vo->set_description( $dados->Project );
+    $this->vo->set_description( $dados->description );
   }
 }

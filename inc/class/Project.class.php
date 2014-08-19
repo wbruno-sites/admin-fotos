@@ -1,1 +1,1 @@
-<?php/** * @class Project * @author William Bruno * @date 2014-08-19 */class Project extends AbstractModel{	public function __construct()	{		$this->table = 'project';		$this->vo = new ProjectVO();    $this->dao = new DAO( $this->table );	}}
+<?php/** * @class Project * @author William Bruno * @date 2014-08-19 */class Project extends AbstractModel{	public function __construct()	{		$this->vo = new ProjectVO();    $this->dao = new DAO( 'project' );	}}

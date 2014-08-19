@@ -34,11 +34,11 @@ class View
 
 				$html .= '<tr'.$class.'>
 					<td>
-						<a href="view/'.$dados->id.'">'.$dados->id.'</a></td>
+						<a href="/admin/projetos/view/'.$dados->id.'">'.$dados->id.'</a></td>
 					<td class="nome">
-						<a href="view/'.$dados->id.'">'.$dados->label.'</a></td>
-					<td><a href="view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>
-					<td><a href="del/'.$dados->id.'"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a></td>
+						<a href="/admin/projetos/view/'.$dados->id.'">'.$dados->label.'</a></td>
+					<td><a href="/admin/projetos/view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>
+					<td><a href="/admin/projetos/del/'.$dados->id.'"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a></td>
 				</tr>';
 
 				$i++;

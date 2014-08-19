@@ -34,7 +34,6 @@
 
 /* horizontal */
 #adcast {
-  width: 3640px;
   position: absolute;
   top: 0; left: 0;
   -webkit-transition: all 1.2s ease-in-out;

@@ -1,48 +1,25 @@
 <?php include 'header.tpl.html'; ?>
   <article id="content" class="content column-full cf">
     <ul id="projects">
+
+<?php
+  $photo = new Photo();
+
+  $model = new Project('project');
+  $query = $model->all();
+
+  while( $dados = $query->fetch_object() ) {
+    $file = is_file($photo->image($dados->id)) ? $photo->image($dados->id) : '/images/projetos/default.png';
+?>
       <li class="project-item column-quarter">
-        <a href="projeto/casa-bunker" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Casa Bunker</span>
+        <a href="projeto/<?php echo slug($dados->label); ?>/<?php echo $dados->id; ?>" class="project-item-link overflow">
+          <img src="<?php echo $file; ?>" alt="">
+          <span class="project-item-name"><?php echo $dados->label; ?></span>
         </a>
       </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/empreendimento-paranapanema" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Empreendimento Paranapanema</span>
-        </a>
-      </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/escritorio-fehoesp-e-iepas" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Escritório Fehoesp e Iepas</span>
-        </a>
-      </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/casa-morumbi" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Casa Morumbi</span>
-        </a>
-      </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/apartamento-rivieira" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Apartamento Rivieira</span>
-        </a>
-      </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/mostra-artefacto" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Mostra Artefacto</span>
-        </a>
-      </li>
-      <li class="project-item column-quarter">
-        <a href="projeto/casa-pergola" class="project-item-link">
-          <img src="images/projetos/1.png" alt="">
-          <span class="project-item-name">Casa Pérgola</span>
-        </a>
-      </li>
+<?php
+  }
+?>
     </ul>
   </article><!-- #content -->
 <?php include 'footer.tpl.html'; ?>
