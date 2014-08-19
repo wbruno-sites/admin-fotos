@@ -33,43 +33,41 @@
       <label>
         <span>Imagens principal <small> - 220x220</small></span>
         <input type="file" name="image" id="image" />
-        <p class="response">
+
 <?php
   $photo = new Photo();
   $photo->base = '../../';
   $file = $photo->image(getGet('id'));
-  echo $file;
 ?>
-        </p>
       </label>
+      <ul class="images-list">
+        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+      </ul>
 
       <label>
         <span>Imagens para o carousel <small> - 638x400</small></span>
         <input type="file" name="carousel[]" id="carousel" multiple="multiple" />
-        <p class="response">
-<?php
-  $files = $photo->carousel(getGet('id'));
-
-  foreach($files AS $file) {
-    echo $file.'<br>';
-  }
-?>
-        </p>
       </label>
+
+<?php $files = $photo->carousel(getGet('id')); ?>
+      <ul class="images-list">
+<?php foreach($files AS $file) { ?>
+        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+<?php } ?>
+      </ul>
 
       <label>
         <span>Plantas/Desenhos <small> - max 667x...</small></span>
         <input type="file" name="blueprint[]" id="blueprint" multiple="multiple" />
-        <p class="response">
-<?php
-  $files = $photo->blueprint(getGet('id'));
-
-  foreach($files AS $file) {
-    echo $file.'<br>';
-  }
-?>
-        </p>
       </label>
+
+  <?php $files = $photo->blueprint(getGet('id')); ?>
+      <ul class="images-list">
+<?php foreach($files AS $file) { ?>
+        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+<?php } ?>
+      </ul>
+
 <?php } else { ?>
       <p>Após salvar, entre novamente para cadastrar as imagens</p>
 <?php }?>

@@ -17,3 +17,6 @@ table#list tr td {
 /* skin */
 *::selection { background: #272727; color: #fff; }
 *::-moz-selection { background: #272727; color: #fff; }
+
+.images-list { margin-bottom: 20px; }
+.images-list img { cursor: pointer; }
