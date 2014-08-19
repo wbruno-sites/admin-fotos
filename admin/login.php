@@ -1,12 +1,26 @@
 <?php
 include '../inc/init.inc.php';
 
-require 'models/Login.php';
+if( isPost() )
+{
+  $login = getPost( 'user' );
+  $senha = getPost( 'password' );
 
-$login = new Login(getPost('user'), getPost('password'));
 
-if ($login->checkLogin()) {
-  header('Location: /admin/home.html');
-} else {
-  header('Location: /admin/index.html');
+  if( !empty($login) && !empty($senha) ){
+    $user = new User();
+
+    if( $user->login( $login, $senha ) )
+      header('Location: /admin/home');
+    else
+      header('Location:  /admin/index?error=2');
+  }
+  else {
+    //session_destroy();
+    header('Location:  /admin/index?error=1');
+  }
+}
+else {
+  //session_destroy();
+  header('Location:  /admin/index?error=0');//tentar acessar essa página diretamente
 }

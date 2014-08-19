@@ -1,5 +1,5 @@
 #header {
-  padding-top: 15px;
+  padding-top: 35px;
   margin-bottom: 40px;
 }
 .header-inner { position: relative; }
@@ -29,7 +29,7 @@ body.feed .header-nav-feed {
 @media only screen and (max-width: 660px) {
   #logo { float: none; display: block; margin: 0 auto 15px; width: 150px; }
   #header-nav { position: static; width: 290px; margin: 0 auto; }
-  .header-nav-item { margin-right: 17px; }
+  .header-nav-item { margin-right: 6px; }
 }
 @media only screen and (max-width: 480px) {
   #logo { width: 130px; }

@@ -1,0 +1,19 @@
+table#list th a {
+	text-decoration: underline;
+}
+table#list tr.dif {
+	background: #666;
+}
+table#list tr td.nome {
+	text-align: left;
+	width: 400px;
+}
+table#list tr td {
+	text-align: center;
+	width: 50px;
+}
+#header { height: 100px; }
+#content { min-height: 400px; }
+/* skin */
+*::selection { background: #272727; color: #fff; }
+*::-moz-selection { background: #272727; color: #fff; }

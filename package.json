@@ -1,0 +1,22 @@
+{
+  "name": "studioag",
+  "version": "0.0.1",
+  "description": "Studio ag",
+  "homepage": "http://studioag.arq.br/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "main": "app.js",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wbruno/studioag.git"
+  },
+  "author": "William Bruno",
+  "license": "ISC"
+}

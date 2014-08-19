@@ -10,7 +10,11 @@
   margin: 0 10px 10px 0;
   position: absolute;
   top: 0; left: 0;
-  transition: 1.2s;
+  -webkit-transition: all 1.2s;
+     -moz-transition: all 1.2s;
+      -ms-transition: all 1.2s;
+       -o-transition: all 1.2s;
+          transition: all 1.2s;
   opacity: 0;
 }
 #adcast .is-active { opacity: 1; }
@@ -33,7 +37,11 @@
   width: 3640px;
   position: absolute;
   top: 0; left: 0;
-  transition: 2s;
+  -webkit-transition: all 1.2s ease-in-out;
+     -moz-transition: all 1.2s ease-in-out;
+      -ms-transition: all 1.2s ease-in-out;
+       -o-transition: all 1.2s ease-in-out;
+          transition: all 1.2s ease-in-out;
 }
 .adcast-item { float: left; position: static; margin: 0; opacity: 1; }
 #adcast.adcast-item-0 { left: 0; }

@@ -1,2 +1,3 @@
 #admin
-RewriteRule ^admin\/login\/?$ /admin/login.php [NC,L]
+RewriteRule ^admin\/([a-z-]+)\/?$ /admin/views/$1.php [NC,L]
+RewriteRule ^admin\/view\/([a-z-]+)\/?$ /admin/views/view/$1.php [NC,L]

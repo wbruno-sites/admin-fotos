@@ -1,4 +1,7 @@
-<?php include 'header.tpl.html'; ?>
+<?php
+  @session_destroy();
+  include 'header.tpl.html';
+?>
   <article id="content" class="content column-quarter cf">
 
     <form action="login/" method="post" id="form-login">
