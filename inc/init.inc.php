@@ -7,10 +7,10 @@ ini_set('display_errors', TRUE);
 
 setlocale(LC_ALL, "pt_BR", "pt_BR.iso-8859-1", "pt_BR.utf-8", "portuguese");
 date_default_timezone_set('America/Sao_Paulo');
-        
+
 set_include_path(implode(PATH_SEPARATOR, array(
-        BASE_PATH.'class',
-        get_include_path()
+  BASE_PATH.'class',
+  get_include_path()
 )));
 
 /**
@@ -41,14 +41,14 @@ function isPost(){
 	}
 }
 /**
- * Verfica o se existe valor 
+ * Verfica o se existe valor
  * @param $campo var, valor na URL
  */
 function getGet( $campo ){
 	return isset($_GET[$campo]) ? filter( $_GET[$campo] ) : '';
 }
 /**
- * Verfica o se existe valor 
+ * Verfica o se existe valor
  * @param $campo var, name do input a ser verificado
  */
 function getPost( $campo ){
@@ -71,9 +71,9 @@ function filter( $var ){
 /**
  * @param $string, valor que será limpo para URL
  */
-function fazLink( $string ){
+function slug( $string ){
 	$string = trim($string);
-	
+
 	$string = preg_replace("/[áàâãª]/i","a",$string);
 	$string = preg_replace("/[éèê]/i","e",$string);
 	$string = preg_replace("/[íìî]/i","i",$string);
@@ -81,11 +81,11 @@ function fazLink( $string ){
 	$string = preg_replace("/[úù]/i","u",$string);
 	$string = preg_replace("/[ç]/i","c",$string);
 	$string = preg_replace("/[\/,()]/i","",$string);
-	
+
 	$string = strtolower($string);
 
 	$string = preg_replace('/[^a-z0-9\.]/i', '-', $string);
-	
+
 	return $string;
 }
 
@@ -93,22 +93,22 @@ function fazLink( $string ){
  * @return boolean, true caso a URI seja a home do site
  */
 function is_home(){
-	return stripos( $_SERVER['REQUEST_URI'], 'index.html' ) 
-		|| !stripos( $_SERVER['REQUEST_URI'], '.html' );
+	return stripos( $_SERVER['REQUEST_URI'], 'index.html' )
+		|| ( $_SERVER['REQUEST_URI'] === '/' );
 }
 /**
  * @return string, class=""(html) de acordo com o URI atual
  */
 function get_body_class(){
 	if( is_home() ) return 'class="home"';
-	
+
 	$pieces = explode( '/', $_SERVER['REQUEST_URI'] );
 	$class = Array();
 	foreach( $pieces AS $part ){
 		$class[] = str_replace( '.html', '', $part );
 	}
-	
-	return 'class="'.trim(implode( ' ', $class )).'"';	
+
+	return 'class="'.trim(implode( ' ', $class )).'"';
 }
 /**
  * @see get_body_class()

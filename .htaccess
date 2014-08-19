@@ -5,6 +5,14 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.studioag\.arq\.br$
 RewriteRule (.*) http://studioag.arq.br/$1 [R=301,NC,L]
 
+#admin
+RewriteRule ^admin\/login\/?$ /admin/login.php [NC,L]
+
+
+
+#site
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z-]+)$ $1.html [NC,L]
 RewriteRule ^projeto\/([a-z-]+)$ view-projeto.html?project=$1 [NC,L]
 

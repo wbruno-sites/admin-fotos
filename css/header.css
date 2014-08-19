@@ -11,13 +11,21 @@
 .header-nav-item {
   color: #343434;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 40px;
 }
-.header-nav-item:hover { color: #FFCC66 }
+.header-nav-item:hover { color: #FFCC66; text-decoration: none; }
 .header-nav-item:last-child { margin-right: 0 }
-.header-nav-item.active { color: #6e6e6e; }
+.header-nav-item.active { color: #FFCC66; }
 
+body.home .header-nav-home,
+body.projetos .header-nav-projetos,
+body.projeto .header-nav-projetos,
+body.studio .header-nav-studio,
+body.contato .header-nav-contato,
+body.feed .header-nav-feed {
+  color: #aaa;
+}
 @media only screen and (max-width: 660px) {
   #logo { float: none; display: block; margin: 0 auto 15px; width: 150px; }
   #header-nav { position: static; width: 290px; margin: 0 auto; }
