@@ -9,7 +9,7 @@
   $query = $model->all();
 
   while( $dados = $query->fetch_object() ) {
-    $file = is_file($photo->image($dados->id)) ? $photo->image($dados->id) : '/images/projetos/default.png';
+    $file = is_file($photo->image($dados->id)) ? "/uploads/image/{$dados->id}/".basename($photo->image($dados->id)) : '/images/projetos/default.png';
 ?>
       <li class="project-item column-quarter">
         <a href="projeto/<?php echo slug($dados->label); ?>/<?php echo $dados->id; ?>" class="project-item-link overflow">

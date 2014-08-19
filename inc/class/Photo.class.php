@@ -6,10 +6,12 @@
  */
 class Photo
 {
-  public $base = '';
+  public $base;
 
+  public function __construct(){
+    $this->base = $_SERVER['DOCUMENT_ROOT'].'/';
+  }
   public function image($id) {
-
     $files = $this->get($this->base . "uploads/image/{$id}/");
     return isset($files[0]) ? $files[0] : '';
   }

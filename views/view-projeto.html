@@ -24,7 +24,7 @@
   $pagers = Array();
 
   foreach($files AS $file) {
-    $imgs[] = '<li class="adcast-item is-active"><img src="/' . $file . '" alt="" /></li>';
+    $imgs[] = '<li class="adcast-item is-active"><img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt="" /></li>';
     $pagers[] = '<span class="pager-item fleft is-active" data-adcast="' . $i . '"></span>';
     $i++;
   }
@@ -52,7 +52,7 @@
   $i = 0;
   $blueprint = Array();
   foreach($files AS $file) {
-    $blueprint[] = '<li class="blueprint-item"><img src="/' . $file . '" alt=""></li>';
+    $blueprint[] = '<li class="blueprint-item"><img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt=""></li>';
     $i++;
   }
   echo implode($blueprint);
