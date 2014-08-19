@@ -52,7 +52,7 @@
   $i = 0;
   $blueprint = Array();
   foreach($files AS $file) {
-    $blueprint[] = '<li class="blueprint-item"><img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt=""></li>';
+    $blueprint[] = '<li class="blueprint-item"><img src="/uploads/blueprint/'. $vo->get_id() .'/'. basename($file) . '" alt=""></li>';
     $i++;
   }
   echo implode($blueprint);
