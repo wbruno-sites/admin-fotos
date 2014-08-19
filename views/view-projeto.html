@@ -17,14 +17,15 @@
 ?>
     <div id="adcast-wrap" class="content space-bottom">
       <div class="overflow">
-        <ul id="adcast" style="width: <?php echo sizeof($files) * 638 ?>px">
+        <ul id="adcast" style="width: <?php echo sizeof($files) * 100 ?>%">
 <?php
   $i = 0;
   $imgs = Array();
   $pagers = Array();
 
   foreach($files AS $file) {
-    $imgs[] = '<li class="adcast-item is-active"><img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt="" /></li>';
+    $imgs[] = '<li class="adcast-item is-active" style="width: '. number_format(100 / sizeof($files), 2, '.', ',').'%;">
+      <img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt="" /></li>';
     $pagers[] = '<span class="pager-item fleft is-active" data-adcast="' . $i . '"></span>';
     $i++;
   }
@@ -36,6 +37,7 @@
     echo implode($pagers);
 ?>
         </div><!-- #pager -->
+        <img src="/images/blank.gif" alt="" width="638" height="400" id="adcast-gif">
       </div><!-- .overflow -->
     </div><!-- #adacst-wrap -->
 <?php }//if carousel ?>

@@ -6,7 +6,7 @@ session_start();
 
 
 $CONFIG = parse_ini_file('config.ini', true);
-$DB = $CONFIG['prod'];
+$DB = $CONFIG['dev'];
 
 define('HOST', $DB['host']);
 define('USER', $DB['user']);
