@@ -38,7 +38,7 @@ class View
 					<td class="nome">
 						<a href="/admin/projetos/view/'.$dados->id.'">'.$dados->label.'</a></td>
 					<td><a href="/admin/projetos/view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>
-					<td><a href="/admin/projetos/del/'.$dados->id.'"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a></td>
+					<td data-id="'.$dados->id.'"><a href="/admin/projetos/del/'.$dados->id.'" class="del-model"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a></td>
 				</tr>';
 
 				$i++;

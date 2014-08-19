@@ -40,10 +40,11 @@
   $file = $photo->image(getGet('id'));
 ?>
       </label>
+<?php if(is_file($file)){?>
       <ul class="images-list">
         <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
       </ul>
-
+<?php } ?>
       <label>
         <span>Imagens para o carousel <small> - 638x400</small></span>
         <input type="file" name="carousel[]" id="carousel" multiple="multiple" />
@@ -76,7 +77,5 @@
     </fieldset>
   </form>
 
-<script src="/admin/javascript/xhr.js"></script>
-<script src="/admin/javascript/all.js"></script>
 </article><!-- #content -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/admin/views/footer.tpl.html'; ?>

@@ -22,12 +22,6 @@ class DAO
 		$this->type = null;
 		$this->statement = Array();
 	}
-
-	final public function del( ValueObject $vo )
-	{
-		$sql = $this->delete( $vo );
-		return $this->query( $sql );
-	}
 	final public function execute( $debug=false )
 	{
 		$ret = true;

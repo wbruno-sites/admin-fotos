@@ -25,4 +25,13 @@ class Photo
     $files = glob( $path . '*.*' );
     return $files;
   }
+  public function delTree($dir) {
+   $files = $this->get($this->base.$dir);
+    foreach ($files as $file) {
+      @unlink($file);
+    }
+    if(is_dir($this->base.$dir)) {
+      return rmdir($this->base.$dir);
+    }
+  }
 }
