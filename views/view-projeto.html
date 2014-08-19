@@ -19,12 +19,17 @@
       <div class="overflow">
         <ul id="adcast" style="width: <?php echo sizeof($files) * 100 ?>%">
 <?php
+
+function floordec($zahl,$decimals=2){
+  return str_replace(',', '.', floor($zahl*pow(10,$decimals))/pow(10,$decimals));
+}
+
   $i = 0;
   $imgs = Array();
   $pagers = Array();
 
   foreach($files AS $file) {
-    $imgs[] = '<li class="adcast-item is-active" style="width: '. number_format(100 / sizeof($files), 2, '.', ',').'%;">
+    $imgs[] = '<li class="adcast-item is-active" style="width: '. floordec(100 / sizeof($files)).'%;">
       <img src="/uploads/carousel/'. $vo->get_id() .'/'. basename($file) . '" alt="" /></li>';
     $pagers[] = '<span class="pager-item fleft is-active" data-adcast="' . $i . '"></span>';
     $i++;
