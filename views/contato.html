@@ -32,12 +32,15 @@
       </fieldset>
     </form>
 
-    <p class="contact-address column-full">End.: Rua Itália, 285 - CEP 01449-020 - São Paulo - SP<br>
-    Tel.: 55 11 3085 1652<br>
-    Facebook: <a href="https://fb.com/studioagarquitetura">fb.com/studioagarquitetura</a><br>
-    Instagram: <a href="http://instagram.com/studioagarquitetura">instagram.com/studioagarquitetura</a><br>
-    <a href="mailto:contato@studioag.com.br">contato@studioag.com.br</a>
+    <p class="contact-address column-full">
+<?php
+  $page = new Page();
+  $data = $page->one(3);
 
+  if ($data) {
+    echo nl2br( $data->text );
+  }
+?>
     </p>
   </article><!-- #content -->
 <?php include 'footer.tpl.html'; ?>
