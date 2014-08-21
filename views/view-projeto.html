@@ -9,7 +9,7 @@
 
 ?>
   <article id="content" class="content column-full cf">
-    <h1 class="column-full"><?php echo $vo->get_label(); ?><?php echo $vo->get_description() ? ' | '.$vo->get_description() : ''; ?></h1>
+    <h1 class="column-full"><?php echo $vo->get_label(); ?></h1>
 
 <?php
   $files = $photo->carousel(getGet('id'));
@@ -47,6 +47,7 @@ function floordec($zahl,$decimals=2){
     </div><!-- #adacst-wrap -->
 <?php }//if carousel ?>
 
+<p><?php echo $vo->get_description(); ?></p>
 
 <?php
   $files = $photo->blueprint(getGet('id'));

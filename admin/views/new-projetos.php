@@ -46,7 +46,7 @@
       </ul>
 <?php } ?>
       <label>
-        <span>Imagens para o carousel <small> - 638x400</small></span>
+        <span>Imagens para o carousel <small> - 1000x400</small></span>
         <input type="file" name="carousel[]" id="carousel" multiple="multiple" />
       </label>
 
@@ -58,7 +58,7 @@
       </ul>
 
       <label>
-        <span>Plantas/Desenhos <small> - max 667x...</small></span>
+        <span>Plantas/Desenhos <small> - max 667x(sem limite)</small></span>
         <input type="file" name="blueprint[]" id="blueprint" multiple="multiple" />
       </label>
 

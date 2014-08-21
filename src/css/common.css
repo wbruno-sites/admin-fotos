@@ -3,7 +3,7 @@
 
 html, body { height: 100%; }
 body,
-input, select, textarea { font: normal 16px 'Open Sans', sans-serif; color: #555; }
+input, select, textarea { font: normal 16px 'Open Sans Condensed', sans-serif; color: #555; }
 
 body { min-width: 300px; background: #fff; }
 
@@ -27,7 +27,7 @@ p { margin-bottom: 25px; line-height: 1.4em; }
 .border-right {
   border-right: 1px solid #555;
 }
-.img-full { margin-bottom: 40px; display: block; }
+.img-full { margin-bottom: 15px; display: block; }
 
 @media only screen and (max-width: 660px) {
   .border-right { border-right: none; border-bottom:  1px solid #555; margin-bottom: 20px; }

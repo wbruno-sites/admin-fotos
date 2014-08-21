@@ -1,6 +1,7 @@
 #header {
   padding-top: 35px;
   margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
 }
 .header-inner { position: relative; }
 #header-nav {
