@@ -31,18 +31,17 @@
 
 <?php if ($vo->get_id()) { ?>
       <label>
-        <span>Imagens principal <small> - 220x220</small></span>
+        <span>Imagem principal <small> - 220x220</small></span>
         <input type="file" name="image" id="image" />
 
 <?php
   $photo = new Photo();
-  $photo->base = '../../';
   $file = $photo->image(getGet('id'));
 ?>
       </label>
 <?php if(is_file($file)){?>
       <ul class="images-list">
-        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+        <li data-img="<?php echo $file; ?>"><?php echo basename($file); ?> - <img src="/admin/images/action4.gif" /></li>
       </ul>
 <?php } ?>
       <label>
@@ -53,7 +52,7 @@
 <?php $files = $photo->carousel(getGet('id')); ?>
       <ul class="images-list">
 <?php foreach($files AS $file) { ?>
-        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+        <li data-img="<?php echo $file; ?>"><?php echo basename($file); ?> - <img src="/admin/images/action4.gif" /></li>
 <?php } ?>
       </ul>
 
@@ -65,7 +64,7 @@
   <?php $files = $photo->blueprint(getGet('id')); ?>
       <ul class="images-list">
 <?php foreach($files AS $file) { ?>
-        <li data-img="<?php echo $file; ?>"><?php echo $file; ?> - <img src="/admin/images/action4.gif" /></li>
+        <li data-img="<?php echo $file; ?>"><?php echo basename($file); ?> - <img src="/admin/images/action4.gif" /></li>
 <?php } ?>
       </ul>
 

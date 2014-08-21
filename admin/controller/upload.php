@@ -2,12 +2,11 @@
 
 $id_project = getPost('id');
 
-
 if( $id_project ) {
 
   if (isset($_FILES["image"])) {
     $dir = $_SERVER['DOCUMENT_ROOT']."/uploads/image/{$id_project}/";
-    mkdir($dir);
+    @mkdir($dir);
     move_uploaded_file( $_FILES["image"]["tmp_name"], $dir . $_FILES["image"]["name"]);
   }
 
@@ -20,10 +19,18 @@ if( $id_project ) {
     $dir = $_SERVER['DOCUMENT_ROOT']."/uploads/blueprint/{$id_project}/";
     upload($_FILES["blueprint"], $dir);
   }
+
+  if (isset($_FILES["header"])) {
+    $dir = $_SERVER['DOCUMENT_ROOT']."/uploads/header/{$id_project}/";
+    @mkdir($dir);
+    move_uploaded_file( $_FILES["header"]["tmp_name"], $dir . $_FILES["header"]["name"]);
+  }
 }
 
+header('Location:/admin/'.$model.'/view');
+
 function upload($files, $dir) {
-  mkdir($dir);
+  @mkdir($dir);
 
   foreach ($files["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
@@ -33,5 +40,3 @@ function upload($files, $dir) {
     }
   }
 }
-
-header('Location:/admin/projetos/view');

@@ -9,9 +9,9 @@ RewriteRule (.*) http://studioag.arq.br/$1 [R=301,NC,L]
 RewriteRule ^admin\/?$ /admin/index [NC,L]
 RewriteRule ^admin\/login\/??$ /admin/login.php [NC,L]
 RewriteRule ^admin\/([a-z-]+)\/?$ /admin/views/$1.php [NC,L]
-RewriteRule ^admin\/([a-z-]+)\/view\/?$ /admin/views/view-$1.php [NC,L]
-RewriteRule ^admin\/([a-z-]+)\/new\/?$ /admin/views/new-$1.php [NC,L]
-RewriteRule ^admin\/([a-z-]+)\/view\/?([0-9]+)?\/?$ /admin/views/new-$1.php?id=$2 [NC,L]
+RewriteRule ^admin\/([a-z-]+)\/view\/?$ /admin/views/$1/view.php?model=$1 [NC,L]
+RewriteRule ^admin\/([a-z-]+)\/new\/?$ /admin/views/$1/new.php [NC,L]
+RewriteRule ^admin\/([a-z-]+)\/view\/?([0-9]+)?\/?$ /admin/views/$1/new.php?id=$2 [NC,L]
 RewriteRule ^admin\/([a-z-]+)\/save\/?$ /admin/controller/save.php?model=$1 [NC,L]
 
 

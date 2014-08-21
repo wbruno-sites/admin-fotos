@@ -24,9 +24,10 @@
   $dels.forEach(function($del){
     $del.addEventListener("click", function(event){
       event.preventDefault();
-      var id = $del.parentNode.getAttribute('data-id');
+      var id = $del.parentNode.getAttribute('data-id'),
+          model = $del.parentNode.getAttribute('data-model');
 
-      XHR.post('/admin/controller/delete.php', 'id=' + id, function(data){
+      XHR.post('/admin/controller/delete.php', 'id=' + id + '&model=' + model, function(data){
         console.log(data);
         var $tr = $del.parentNode.parentNode;
         $tr.parentNode.removeChild($tr);

@@ -18,6 +18,10 @@ class Photo
   public function carousel($id) {
     return $this->get($this->base . "uploads/carousel/{$id}/");
   }
+  public function header($id) {
+    $files = $this->get($this->base . "uploads/header/{$id}/");
+    return isset($files[0]) ? $files[0] : '';
+  }
   public function blueprint($id) {
     return $this->get($this->base . "uploads/blueprint/{$id}/");
   }

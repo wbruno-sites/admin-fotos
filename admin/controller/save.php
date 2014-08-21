@@ -9,3 +9,10 @@ if ($model === 'projetos') {
 
   include 'upload.php';
 }
+
+if ($model === 'paginas') {
+  $controller = new PageController(new PageVO(), new Page());
+  $controller->save();
+
+  include 'upload.php';
+}

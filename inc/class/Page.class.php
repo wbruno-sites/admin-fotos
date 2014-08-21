@@ -1,0 +1,1 @@
+<?php/** * @class Page * @author William Bruno * @date 2014-08-21 */class Page extends AbstractModel{	public function __construct()	{		$this->vo = new PageVO();    $this->dao = new DAO( 'page' );	}}

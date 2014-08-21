@@ -1,7 +1,21 @@
 <?php include 'header.tpl.html'; ?>
 	<article id="content" class="content column-full cf">
     <figure class="column-full">
-      <img src="images/img-home.png" alt="Studio AG - Arquitetas Amanda Castro e Giovana Giosa" class="img-full" />
+<?php
+  $photo = new Photo();
+  $file = $photo->header(2);
+?>
+      <img src="/uploads/header/2/<?php echo basename($file); ?>" alt="Studio AG - Arquitetas Amanda Castro e Giovana Giosa" class="img-full" />
     </figure>
+    <p class="column-full">
+<?php
+  $page = new Page();
+  $data = $page->one(2);
+
+  if ($data) {
+    echo nl2br( $data->text );
+  }
+?>
+    </p>
 	</article><!-- #content -->
 <?php include 'footer.tpl.html'; ?>

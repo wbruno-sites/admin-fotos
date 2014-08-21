@@ -6,11 +6,9 @@
  */
 class View
 {
-	public function listar_registros( $query )
+	public function table_list( $query )
 	{
-		$ctrl = getGet('ctrl');
-		$ac = getGet('ac');
-
+		$model = getGet('model');
 		$order = getGet('order')!='DESC' ? 'DESC' : 'ASC';
 
 		$html = '<table id="list">';
@@ -19,9 +17,12 @@ class View
 				<tr>
 					<th>ID</th>
 					<th>Nome</th>
-					<th>Editar</th>
-					<th>Excluir</th>
-				</tr>
+					<th>Editar</th>';
+
+		if ($model !== 'paginas')
+			$html .= '<th>Excluir</th>';
+
+		$html .= '</tr>
 			</thead>
 			<tbody>';
 
@@ -34,11 +35,16 @@ class View
 
 				$html .= '<tr'.$class.'>
 					<td>
-						<a href="/admin/projetos/view/'.$dados->id.'">'.$dados->id.'</a></td>
+						<a href="/admin/'.$model.'/view/'.$dados->id.'">'.$dados->id.'</a></td>
 					<td class="nome">
-						<a href="/admin/projetos/view/'.$dados->id.'">'.$dados->label.'</a></td>
-					<td><a href="/admin/projetos/view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>
-					<td data-id="'.$dados->id.'"><a href="/admin/projetos/del/'.$dados->id.'" class="del-model"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a></td>
+						<a href="/admin/'.$model.'/view/'.$dados->id.'">'.$dados->label.'</a></td>
+					<td><a href="/admin/'.$model.'/view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>';
+
+				if ($model !== 'paginas')
+					$html .= '<td data-id="'.$dados->id.'" data-model="'.$model.'">
+						<a href="/admin/'.$model.'/del/'.$dados->id.'" class="del-model"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a>';
+
+				$html .= '</td>
 				</tr>';
 
 				$i++;
@@ -85,7 +91,7 @@ class View
 		$form = '
 			<form action="" method="get" id="f-busca">
 				<fieldset class="lado">
-					<label><input type="submit" name="ctrl" value="'.getGet('ctrl').'" /></label>
+					<label><input type="submit" name="model" value="'.getGet('model').'" /></label>
 					<label><input type="hidden" name="ac" value="view" /></label>
 					<label>Busca: <input type="text" name="q" value="'.getGet('q').'" /></label>
 				</fieldset>

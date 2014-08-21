@@ -1,16 +1,21 @@
 <?php include 'header.tpl.html'; ?>
   <article id="content" class="content column-full cf">
     <figure class="column-full">
-      <img src="images/img-studio.png" alt="" class="img-full">
+<?php
+  $photo = new Photo();
+  $file = $photo->header(1);
+?>
+      <img src="/uploads/header/1/<?php echo basename($file); ?>" alt="" class="img-full">
     </figure>
     <section class="column-two-thirds border-right">
-      <p>Fundado em São Paulo pelas arquitetas Amanda Castro e Giovana Giosa, o Studio AG Arquitetura desenvolve projetos em diferentes escalas e usos.</p>
+<?php
+  $page = new Page();
+  $data = $page->one(1);
 
-      <p>Foi criado com a proposta de produzir uma arquitetura contemporânea através de soluções inovadoras e flexíveis buscando atender a versatilidade da atualidade.</p>
-
-      <p>O processo de projeto é o resultado de constante pesquisa, aliando teoria à pratica a fim de trazer um resultado satisfatório de acordo com cada proposta, produzindo assim, uma arquitetura que seja reflexo do seu tempo.</p>
-
-      <p>Acreditamos no poder transformador da arquitetura e em como ela pode influenciar na vida e nas relações das pessoas, assumindo um significado para o espaço e para quem o vivencia.​​​​​​​​​​</p>
+  if ($data) {
+    echo nl2br( $data->text );
+  }
+?>
     </section>
 
 

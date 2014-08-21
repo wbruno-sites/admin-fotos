@@ -10,7 +10,7 @@
 <?php
   $view = new View();
   $model = new Project('project');
-  $view->listar_registros($model->all());
+  $view->table_list($model->all());
 ?>
 
 

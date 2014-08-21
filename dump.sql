@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `page`
+--
+
+DROP TABLE IF EXISTS `page`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `page` (
+  `text` text,
+  `title` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `page`
+--
+
+LOCK TABLES `page` WRITE;
+/*!40000 ALTER TABLE `page` DISABLE KEYS */;
+INSERT INTO `page` VALUES ('Fundado em SÃ£o Paulo pelas arquitetas Amanda Castro e Giovana Giosa, o Studio AG Arquitetura desenvolve projetos em diferentes escalas e usos.\r\n\r\nFoi criado com a proposta de produzir uma arquitetura contemporÃ¢nea atravÃ©s de soluÃ§Ãµes inovadoras e flexÃ­veis buscando atender a versatilidade da atualidade.\r\n\r\nO processo de projeto Ã© o resultado de constante pesquisa, aliando teoria Ã  pratica a fim de trazer um resultado satisfatÃ³rio de acordo com cada proposta, produzindo assim, uma arquitetura que seja reflexo do seu tempo.\r\n\r\nAcreditamos no poder transformador da arquitetura e em como ela pode influenciar na vida e nas relaÃ§Ãµes das pessoas, assumindo um significado para o espaÃ§o e para quem o vivencia.â€‹â€‹â€‹â€‹â€‹â€‹â€‹â€‹â€‹â€‹','Studio',1);
+/*!40000 ALTER TABLE `page` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `project`
 --
 
@@ -27,7 +52,7 @@ CREATE TABLE `project` (
   `description` text,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -75,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-19 18:56:41
+-- Dump completed on 2014-08-21 12:17:20
