@@ -15,6 +15,8 @@ var adcast = (function(window, document) {
             module.$adcastWrap  = config.adcasts[0].parentNode;
             module.$adcasts     = [].slice.call(config.adcasts);
             module.$pagers      = [].slice.call(config.pagers);
+            module.$next        = config.next;
+            module.$prev        = config.prev;
             module.onChange     = config.onChange;
             module.pagersClick  = config.pagersClick || false;
             module.auto         = config.auto || false;
@@ -106,15 +108,23 @@ var adcast = (function(window, document) {
                 module.next();
             });
         },
+        _arrows : function () {
+            module.$next.addEventListener('click', function(){
+                module._setAtual(module.atual + 1);
+                module.next();
+            });
+            module.$prev.addEventListener('click', function(){
+                module._setAtual(module.atual - 1);
+                module.next();
+            });
+        },
         events : function() {
             module.$pagers.forEach(function($pager) {
-                if (module.pagersClick) {
-                    module._onPagersClick($pager);
-                } else {
-                    module._onPagersHover($pager);
-                }
+                (module.pagersClick) ? module._onPagersClick($pager) : module._onPagersHover($pager);
             });
+
             module._keyboard();
+            module._arrows();
         },
         init : function(config) {
             module.config(config);

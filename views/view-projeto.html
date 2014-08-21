@@ -17,6 +17,7 @@
 ?>
     <div id="adcast-wrap" class="content space-bottom">
       <div class="overflow">
+        <span id="adcast-prev" class="adcast-arrow"></span>
         <ul id="adcast" style="width: <?php echo sizeof($files) * 100 ?>%">
 <?php
 
@@ -43,6 +44,7 @@ function floordec($zahl,$decimals=2){
 ?>
         </div><!-- #pager -->
         <img src="/images/blank.gif" alt="" width="638" height="400" id="adcast-gif">
+        <span id="adcast-next" class="adcast-arrow"></span>
       </div><!-- .overflow -->
     </div><!-- #adacst-wrap -->
 <?php }//if carousel ?>
@@ -68,20 +70,17 @@ function floordec($zahl,$decimals=2){
     </ul><!-- #list-blueprints -->
 <?php } ?>
 
-<script src="/javascript/slideshow.js?nocache"></script>
+<script src="/javascript/slideshow.js?nocache=2"></script>
 <script>
 (function() {
   "use strict";
   /*global document:false */
-  var $ = function(selector) {
-      return document.querySelectorAll(selector);
-  },
-      $adcasts = $('.adcast-item'),
-      $pagers = $('.pager-item');
 
   adcast.init({
-    adcasts: $adcasts,
-    pagers: $pagers,
+    adcasts: document.querySelectorAll('.adcast-item'),
+    pagers: document.querySelectorAll('.pager-item'),
+    next: document.getElementById('adcast-next'),
+    prev: document.getElementById('adcast-prev'),
     pagersClick: true
   });
 }());

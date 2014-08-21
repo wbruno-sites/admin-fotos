@@ -31,11 +31,11 @@ body.feed .header-nav-feed {
 }
 
 .header-nav-pinterest {
-  background: url('../images/sprite-social-midia.png') left center;
+  background: url('../images/sprite-header.png') left center;
   width: 20px; height: 20px;
 }
 .header-nav-instagram {
-  background: url('../images/sprite-social-midia.png') -30px center;
+  background: url('../images/sprite-header.png') right center;
   width: 20px; height: 20px;
 }
 
