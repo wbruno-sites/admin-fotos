@@ -14,6 +14,8 @@
   text-transform: uppercase;
   font-size: 14px;
   margin-right: 40px;
+  float: left;
+  height: 20px; line-height: 20px;
 }
 .header-nav-item:hover { color: #FFCC66; text-decoration: none; }
 .header-nav-item:last-child { margin-right: 0 }
@@ -27,10 +29,20 @@ body.contato .header-nav-contato,
 body.feed .header-nav-feed {
   color: #aaa;
 }
+
+.header-nav-pinterest {
+  background: url('../images/sprite-social-midia.png') left center;
+  width: 20px; height: 20px;
+}
+.header-nav-instagram {
+  background: url('../images/sprite-social-midia.png') -30px center;
+  width: 20px; height: 20px;
+}
+
 @media only screen and (max-width: 660px) {
   #logo { float: none; display: block; margin: 0 auto 15px; width: 150px; }
   #header-nav { position: static; width: 290px; margin: 0 auto; }
-  .header-nav-item { margin-right: 6px; }
+  .header-nav-item { margin-right: 4px; }
 }
 @media only screen and (max-width: 480px) {
   #logo { width: 130px; }

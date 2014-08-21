@@ -2,7 +2,7 @@
 
 if( $_SERVER['REQUEST_METHOD']=='POST' ) {
   $to             = 'contato@studioag.arq.br'; //para quem vai o email
-  $to             = 'rocha_bruno@hotmail.com'; //para quem vai o email
+  //$to             = 'rocha_bruno@hotmail.com'; //para quem vai o email
   $subject        = 'Site - ' . $_POST['subject'];
 
   /* Mensagem */
