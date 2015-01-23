@@ -25,6 +25,11 @@
       </label>
 
       <label>
+        <span>Ordem</span>
+        <input type="text" name="order" value="<?php echo $vo->get_order(); ?>" class="column-full" required="required" />
+      </label>
+
+      <label>
         <span>Descrição</span>
         <textarea name="description" rows="4" cols="40" class="column-full"><?php echo $vo->get_description(); ?></textarea>
       </label>

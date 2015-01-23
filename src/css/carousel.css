@@ -39,19 +39,17 @@
 .pager-item.is-active { background: #eee; }
 
 .adcast-arrow {
-  width: 36px;
-  height: 36px;
+  width: 12px;
+  height: 22px;
   position: absolute;
   z-index: 10;
-  top: 170px;
-  background: url('../images/arrows.png?nocache') no-repeat;
+  top: 50%;
+  margin-top: -11px;
+  background: url('../images/arrows-new.png') no-repeat;
   cursor: pointer;
 }
 #adcast-prev { background-position: left top; left: 0; }
 #adcast-next { background-position: right top; right: 0; }
-
-#adcast-prev:hover { background-position: left bottom; }
-#adcast-next:hover { background-position: right bottom; }
 
 /* horizontal */
 #adcast {
@@ -86,10 +84,13 @@
 #adcast.adcast-item-19 { left: -1900%; }
 #adcast.adcast-item-20 { left: -2000%; }
 
+@media only screen and (max-width: 1000px) {
+  #adcast-wrap { width: 100%; height: auto; }
+}
+
 @media only screen and (max-width: 638px) {
   img { max-width: 100% !important; height: auto !important; }
   #adcast { width: 100%; }
-  #adcast-wrap { width: 100%; height: auto; }
 
   #adcast-gif { display: block; }
 }

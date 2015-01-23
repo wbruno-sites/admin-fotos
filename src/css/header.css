@@ -6,7 +6,7 @@
 .header-inner { position: relative; }
 #header-nav {
   position: absolute;
-  bottom: 0;
+  bottom: 70px;
   right: 15px;
 }
 .header-nav-item {

@@ -19,8 +19,12 @@ class View
 					<th>Nome</th>
 					<th>Editar</th>';
 
-		if ($model !== 'paginas')
+		if ($model === 'projetos') {
+			$html .= '<th>Ordem</th>';
+		}
+		if ($model !== 'paginas') {
 			$html .= '<th>Excluir</th>';
+		}
 
 		$html .= '</tr>
 			</thead>
@@ -40,9 +44,14 @@ class View
 						<a href="/admin/'.$model.'/view/'.$dados->id.'">'.$dados->label.'</a></td>
 					<td><a href="/admin/'.$model.'/view/'.$dados->id.'"><img src="/admin/images/action3.gif" alt="editar" title="editar" /></a></td>';
 
-				if ($model !== 'paginas')
+				if ($model === 'projetos'){
+					$html .= '<td>'.$dados->order;
+				}
+
+				if ($model !== 'paginas') {
 					$html .= '<td data-id="'.$dados->id.'" data-model="'.$model.'">
 						<a href="/admin/'.$model.'/del/'.$dados->id.'" class="del-model"><img src="/admin/images/action4.gif" alt="excluir" title="excluir" /></a>';
+				}
 
 				$html .= '</td>
 				</tr>';

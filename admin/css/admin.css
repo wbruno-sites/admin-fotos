@@ -1,3 +1,4 @@
+table#list { margin-bottom: 50px; }
 table#list th a {
 	text-decoration: underline;
 }

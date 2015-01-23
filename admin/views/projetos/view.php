@@ -5,14 +5,13 @@
 
 <h1>Projetos</h1>
 
-<a href="/admin/projetos/new" class="btn fright">Cadastrar novo</a>
-
 <?php
   $view = new View();
   $model = new Project('project');
   $view->table_list($model->all());
 ?>
 
+<a href="/admin/projetos/new" class="btn clear">Cadastrar novo</a>
 
 </article><!-- #content -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/admin/views/footer.tpl.html'; ?>
