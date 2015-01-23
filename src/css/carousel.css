@@ -45,7 +45,7 @@
   z-index: 10;
   top: 50%;
   margin-top: -11px;
-  background: url('../images/arrows-new.png') no-repeat;
+  background: url('../images/arrows-new.png?nocache') no-repeat;
   cursor: pointer;
 }
 #adcast-prev { background-position: left top; left: 0; }
